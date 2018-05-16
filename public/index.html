@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction course Minsait</title>
+    <link rel="stylesheet" type="text/css" href="css/semantic-ui-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+
+  <body>
+
+    <h1>Introduction course</h1>
+      <p>This web application has been developed with Vanilla JS - with Love by Carlos Wu</p>
+      <p>Features</p>
+      <ul>
+        <li>ES2015</li>
+        <li>Modular Javascript</li>
+        <li>Semantic UI css styles</li>
+        <li>Fetch API with promises</li>
+      </ul>
+
+      <div id="app">
+
+        <div class="ui top attached tabular menu">
+          <div class="active item btn"><a href="#tab1">People</a></div>
+          <div class="item btn"><a href="#tab2">Companies</a></div>
+        </div>
+        <div id="tab1" class="active ui bottom attached tab segment">
+          <section id="humans">
+            <div class="ui card">
+              <div class="image">
+                <img class="image right floated mini ui image" src=""/>
+              </div>
+              <div class="content">
+                <h2 class="header name"></h2>
+                <div class="meta">
+                  <span class="id date"></span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
+        <div id="tab2" class="ui bottom attached tab segment">
+          <section id="entities">
+
+            <div class="ui card">
+
+              <div class="content">
+                <h2 class="header name"></h2>
+                <h3 class="header suffix"></h3>
+                <div class="meta">
+                  <span class="id date"></span>
+                  <span class="address date"></span>
+                </div>
+
+              </div>
+
+            </div>
+          </sections>
+        </div>
+
+
+
+      </div>
+
+    <!-- <script type="text/javascript" src="/js/people.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/company.js"></script> -->
+    <script src="js/error.js"></script>
+    <script src="js/changeSection.js"></script>
+    <script async src="js/people.js"></script>
+    <script async src="js/company.js"></script>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

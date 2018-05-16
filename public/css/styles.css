@@ -1,0 +1,15 @@
+/*
+Estilos personalizados para la aplicacion
+ */
+
+body {
+  margin: 0 10%;
+}
+
+.tab {
+  display:none;
+}
+
+#tab1 .active, #tab2 .active {
+  display:block;
+}

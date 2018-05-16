@@ -1,0 +1,49 @@
+const fetchPeople = () => {
+fetch('http://localhost:3000/people').then(function(response) {
+
+  response.json().then((people) => {
+
+   const plantilla = document.getElementById('app').innerHTML;
+   const envoltorio = document.createElement('span');
+
+     people.forEach((person) => {
+         // Create element containing the HTML included in #my-template
+         const el = document.createElement('div')
+         el.innerHTML = plantilla
+
+         el.getElementsByClassName('ID')[0].appendChild(document.createTextNode('ID: ' + person.id))
+         el.getElementsByClassName('image')[0].setAttribute('src', person.image)
+         el.getElementsByClassName('name')[0].appendChild(document.createTextNode('Nombre: ' + person.name))
+
+         // console.log(envoltorio)
+         envoltorio.appendChild(el)
+       })
+       document.getElementById('app').appendChild(envoltorio)
+
+    });
+
+  }).catch((err) => {
+    console.log(err);
+    return err;
+  });
+
+}
+
+fetchPeople();
+
+(function(m, i, n, s, a, i, t) {
+   // console.log('document loaded')
+   // fetch /people
+
+   fetchPeople();
+
+
+   fetch('http://localhost:3000/company').then((response) => {
+     console.log(response)
+     const people = response;
+   }).catch((err) => {
+     console.log(err)
+
+   })
+
+})();
